@@ -65,21 +65,21 @@ class MainActivity : AppCompatActivity() {
         var cPostIncremento:Int = 5
         var dPostDecremento:Int = 5
 
-        println(aPreIncremento) // salida normal
+        println(aPreIncremento)
         println(++aPreIncremento)   // Incrementa en 1 , y luego imprime Salida: 6
-        println(aPreIncremento)   // salida menos 1
+        println(aPreIncremento)
 
-        println(bPreDecremento) // salida normal
+        println(bPreDecremento)
         println(--bPreDecremento)  // Primero se decrementa en 1 y luego imprime Salida: 4
-        println(bPreDecremento) // salida menos 1
+        println(bPreDecremento)
 
-        println(cPostIncremento)    // salida normal
+        println(cPostIncremento)
         println(cPostIncremento++)    // Primero regresa luego decrementa Salida: 5
-        println(cPostIncremento)    // salida menos 1
+        println(cPostIncremento)
 
-        println(dPostDecremento)    // salida normal
+        println(dPostDecremento)
         println(dPostDecremento--)    // Primero regresa luego decrementa Salida: 4
-        println(dPostDecremento)    // salida menos 1
+        println(dPostDecremento)
 
         /*Cuando se declara una variable y hay una modificacion respecto a si misma el operador se
           puede combinar con el igual (+=) y despues el dato con el que se va a modificar la variable */
