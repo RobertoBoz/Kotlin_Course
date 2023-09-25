@@ -52,5 +52,43 @@ class MainActivity : AppCompatActivity() {
         println(moneda)
         // Tipos de datos Int , Strings, String ,Boolean, Float y Double
         println("id: $id Nombre: $nombre Fecha: $fecha Vip: $vip  Saldo: $saldo Sueldo: $sueldoFloat")
+        // Operadoress
+        var a:Int = 5 + 5 // 10
+        var b:Int = 10 - 2 // 8
+        var c:Int = 3 * 4 // 12
+        var d:Int = 10 / 5 // 2
+        var e:Int = 10 % 3 // 1 no se puede dividr y solo se queda con el resto
+        var f:Int = 10 / 6 // 1 divicion es infinita solo se mantiene la parte entera
+
+        var aPreIncremento:Int = 5
+        var bPreDecremento:Int = 5
+        var cPostIncremento:Int = 5
+        var dPostDecremento:Int = 5
+
+        println(aPreIncremento) // salida normal
+        println(++aPreIncremento)   // Incrementa en 1 , y luego imprime Salida: 6
+        println(aPreIncremento)   // salida menos 1
+
+        println(bPreDecremento) // salida normal
+        println(--bPreDecremento)  // Primero se decrementa en 1 y luego imprime Salida: 4
+        println(bPreDecremento) // salida menos 1
+
+        println(cPostIncremento)    // salida normal
+        println(cPostIncremento++)    // Primero regresa luego decrementa Salida: 5
+        println(cPostIncremento)    // salida menos 1
+
+        println(dPostDecremento)    // salida normal
+        println(dPostDecremento--)    // Primero regresa luego decrementa Salida: 4
+        println(dPostDecremento)    // salida menos 1
+
+        /*Cuando se declara una variable y hay una modificacion respecto a si misma el operador se
+          puede combinar con el igual (+=) y despues el dato con el que se va a modificar la variable */
+
+        saldo += sueldoFloat
+
+        saldo += 1 // Se le suma uno a saldo de diferete forma
+        saldo++ // Se le suma uno a saldo de diferente forma
+
+
     }
 }
