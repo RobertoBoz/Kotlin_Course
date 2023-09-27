@@ -52,6 +52,14 @@ class MainActivity : AppCompatActivity() {
         println(moneda)
         // Tipos de datos Int , Strings, String ,Boolean, Float y Double
         println("id: $id Nombre: $nombre Fecha: $fecha Vip: $vip  Saldo: $saldo Sueldo: $sueldoFloat")
+
+        /* Estructuras de control if sirve para verificar si se cumple una
+        condicion en caso de solo tener una instrucción puedes colocar el if sin corchetes*/
+        if(vip) println("Hola $nombre")
+        /* Estructuras de control else sirve para verificar si no se cumple una
+        condicion en caso de solo tener una instrucción puedes colocar el else sin corchetes*/
+        else println("Saludos aun no eres vip $nombre")
+
         // Operadoress
         var a:Int = 5 + 5 // 10
         var b:Int = 10 - 2 // 8
