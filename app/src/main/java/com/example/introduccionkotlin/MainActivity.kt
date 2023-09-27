@@ -90,5 +90,19 @@ class MainActivity : AppCompatActivity() {
         saldo++ // Se le suma uno a saldo de diferente forma
 
 
+        // Los operadores de comparación siempre retornaraun un valor booleano
+        // En el caso de este operador de comparacion se usa para saber si dos valores son iguales
+        a == b
+        // En el caso de este operador de comparacion se usa para saber si dos valores son diferentes
+        a != b
+        // En el caso de este operador de comparacion se usa para saber si a es mayor que b
+        a > b
+        // En el caso de este operador de comparacion se usa para saber si a es menor que b
+        a < b
+        // En el caso de este operador de comparacion se usa para saber si a es mayor o igual que b
+        a>= b
+        // En el caso de este operador de comparacion se usa para saber si a es menor o igual que b
+        a<= b
+
     }
 }
