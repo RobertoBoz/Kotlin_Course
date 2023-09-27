@@ -60,10 +60,8 @@ class MainActivity : AppCompatActivity() {
         condicion en caso de solo tener una instrucción puedes colocar el else sin corchetes*/
         else println("Saludos aun no eres vip $nombre")
 
-        /*
-            Estructura de control when Sirve para verificar si se cumple una condicion o mas si necesidad de generar un ciclo de if y else
-            el when es un switch en otros lenguajes
-         */
+        /* Estructura de control when Sirve para verificar si se cumple una condicion o mas si necesidad de generar un ciclo de if y else
+            el when es un switch en otros lenguajes*/
         var mes = fecha.subSequence(3,5).toString().toInt()
         when(mes) {
             1 -> println("Enero")
@@ -80,6 +78,8 @@ class MainActivity : AppCompatActivity() {
             12 -> println("Diciembre")
             else -> println("No existe ese mes")
         }
+
+        // Operadores lógicos
 
         // Operadoress
         var a:Int = 5 + 5 // 10
@@ -132,6 +132,20 @@ class MainActivity : AppCompatActivity() {
         a>= b
         // En el caso de este operador de comparacion se usa para saber si a es menor o igual que b
         a<= b
+
+
+        var q = true
+        var w = true
+        var r = false
+        var t = false
+
+        // Operadores logicos
+        q && w //  && = and condicion y condicion los dos deben ser true para que devuelva true
+        //                  a == 5      3 <= valor
+        q || w //  || = or condicion o condicion si uno es true devuelve true
+        //                  a == 5      3 <= valor
+
+        !t    // ! negacion de un booleano q = false w = false r = true t = true
 
     }
 }
