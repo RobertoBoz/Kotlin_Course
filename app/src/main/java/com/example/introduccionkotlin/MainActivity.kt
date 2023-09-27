@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         //  Los valores sé declararán con val son pueden tener cambios en tiempo de ejecución
-        val fecha = "99/99/1999"
+        val fecha = "99/03/1999"
         // Las variables declaradas con var son las que pueden tener cambios en tiempo de ejecución
         var nombre:String = "Roberto"
         // Para declarar valores boleanos se hace de la siguiente manera
@@ -59,6 +59,27 @@ class MainActivity : AppCompatActivity() {
         /* Estructuras de control else sirve para verificar si no se cumple una
         condicion en caso de solo tener una instrucción puedes colocar el else sin corchetes*/
         else println("Saludos aun no eres vip $nombre")
+
+        /*
+            Estructura de control when Sirve para verificar si se cumple una condicion o mas si necesidad de generar un ciclo de if y else
+            el when es un switch en otros lenguajes
+         */
+        var mes = fecha.subSequence(3,5).toString().toInt()
+        when(mes) {
+            1 -> println("Enero")
+            2 -> println("Febrero")
+            3 -> println("Marzo")
+            4 -> println("Abril")
+            5 -> println("Mayo")
+            6 -> println("Junio")
+            7 -> println("Julio")
+            8 -> println("Agosto")
+            9 -> println("Septiembre")
+            10 -> println("Octubre")
+            11 -> println("Noviembre")
+            12 -> println("Diciembre")
+            else -> println("No existe ese mes")
+        }
 
         // Operadoress
         var a:Int = 5 + 5 // 10
