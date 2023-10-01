@@ -171,6 +171,13 @@ class MainActivity : AppCompatActivity() {
 
         println(recibos[2])
 
+        var matriz = arrayOf(
+            arrayOf(1,2,3),
+            arrayOf(4,5,6),
+            arrayOf(7,8,9)
+        )
+        println(matriz[2][2])
+
         if(intentos > 3) println("Tarjeta bloqueada")
         ingresar_sueldo()
         mostrar_saldo()
