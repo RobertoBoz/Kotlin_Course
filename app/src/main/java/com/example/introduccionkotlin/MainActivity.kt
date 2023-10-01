@@ -185,6 +185,7 @@ class MainActivity : AppCompatActivity() {
         retirar_dinero(2000.0F)
         retirar_dinero(5000.0F)
         recorrerArray(recibos)
+        listas()
     }
 
      fun recorrerMatriz(matriz: Array<Array<Int>>) {
@@ -249,6 +250,18 @@ class MainActivity : AppCompatActivity() {
             println(cliente)
         }
 
+    }
+
+    fun listas(){
+        var divisas:List<String> = listOf("MX","US","EU")
+        print(divisas)
+        var divisas2:MutableList<String> = mutableListOf("MX","US","EU")
+        println(divisas2.first())
+        println(divisas2.last())
+        println(divisas2.elementAt(2))
+        println(divisas2.none())
+        divisas2.clear()
+        println(divisas2.none())
     }
 
 }
