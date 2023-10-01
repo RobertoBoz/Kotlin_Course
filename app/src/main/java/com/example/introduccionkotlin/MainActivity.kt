@@ -177,7 +177,7 @@ class MainActivity : AppCompatActivity() {
             arrayOf(10,11,12,13,14,15,16,17,18,19,20)
         )
         recorrerMatriz(matriz)
-
+        setset()
         if(intentos > 3) println("Tarjeta bloqueada")
         ingresar_sueldo()
         mostrar_saldo()
@@ -233,4 +233,22 @@ class MainActivity : AppCompatActivity() {
     private fun verificarCantidadDinero(cantidadDinero:Float):Boolean{
         return cantidadDinero <= saldo
     }
+
+    fun setset(){
+        var clienteVip: Set<Int> = setOf(1,2,3,4,5)
+        println(clienteVip)
+        println( "Numero de clientes vip: ${clienteVip.size}")
+        if (clienteVip.contains(1)) println("Cliente vip")
+        var setMezclado = setOf(1,2,3,4,"a","b","c")
+        var clientes:MutableSet<Int> = mutableSetOf(1,2,3,4,5)
+        for (cliente in clientes){
+            println(cliente)
+        }
+        clientes.add(6);
+        for (cliente in clientes){
+            println(cliente)
+        }
+
+    }
+
 }
