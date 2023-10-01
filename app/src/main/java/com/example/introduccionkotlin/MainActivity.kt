@@ -170,6 +170,9 @@ class MainActivity : AppCompatActivity() {
         if(intentos > 3) println("Tarjeta bloqueada")
 
         ingresar_sueldo()
+        mostrar_saldo()
+        ingreso_dinero(1000.0F)
+        retirar_dinero(2000.0F)
     }
 
     fun mostrar_saldo(){
@@ -179,6 +182,16 @@ class MainActivity : AppCompatActivity() {
     fun ingresar_sueldo(){
         saldo += sueldoFloat
         println("Se ha ingresado el sueldo: $sueldoFloat $moneda")
+        mostrar_saldo()
+    }
+
+    fun ingreso_dinero(dinero:Float){
+        saldo += dinero
+        mostrar_saldo()
+    }
+
+    fun retirar_dinero(dinero:Float){
+        saldo -= dinero
         mostrar_saldo()
     }
 }
