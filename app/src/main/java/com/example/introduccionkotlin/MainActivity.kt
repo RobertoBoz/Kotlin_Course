@@ -168,15 +168,15 @@ class MainActivity : AppCompatActivity() {
         }while (intentos < 3 && pin != clave_ingresada)
 
         var recibos: Array<String> = arrayOf("luz", "agua", "gas")
-
-        println(recibos[2])
-
+        recorrerArray(recibos)
+        recibos.set(0, "internet")
+        recorrerArray(recibos)
         var matriz = arrayOf(
             arrayOf(1,2,3),
-            arrayOf(4,5,6),
-            arrayOf(7,8,9)
+            arrayOf(4,5,6,7,8,9),
+            arrayOf(10,11,12,13,14,15,16,17,18,19,20)
         )
-        println(matriz[2][2])
+        recorrerMatriz(matriz)
 
         if(intentos > 3) println("Tarjeta bloqueada")
         ingresar_sueldo()
@@ -184,6 +184,28 @@ class MainActivity : AppCompatActivity() {
         ingreso_dinero(1000.0F)
         retirar_dinero(2000.0F)
         retirar_dinero(5000.0F)
+        recorrerArray(recibos)
+    }
+
+     fun recorrerMatriz(matriz: Array<Array<Int>>) {
+        for (i in (0 until matriz.size)) {
+            for (j in (0 until matriz[i].size)) {
+                println("Posision: [$i] [$j]  ${matriz[i][j]}")
+            }
+
+        }
+    }
+
+    fun recorrerArray(recibos: Array<String>) {
+
+        for (i in recibos) println(i)
+        for (i in recibos.indices) {
+            println(recibos[i])
+        }
+        for (i in recibos.indices) {
+            println(recibos.get(i))
+        }
+
     }
 
     fun mostrar_saldo(){
