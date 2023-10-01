@@ -186,6 +186,12 @@ class MainActivity : AppCompatActivity() {
         retirar_dinero(5000.0F)
         recorrerArray(recibos)
         listas()
+        mapfuncion()
+        tarea1()
+        tarea2()
+        tarea3()
+        tarea4()
+        tarea5()
     }
 
      fun recorrerMatriz(matriz: Array<Array<Int>>) {
@@ -262,6 +268,93 @@ class MainActivity : AppCompatActivity() {
         println(divisas2.none())
         divisas2.clear()
         println(divisas2.none())
+    }
+    fun mapfuncion(){
+
+        var map: Map<Int,String> = mapOf(1 to "uno",2 to "dos",3 to "tres")
+        println(map)
+    }
+
+    fun tarea1(){
+        var count = 9
+
+        do {
+            println(count)
+            count--
+        } while (count >= 0)
+
+        println("¡Despegue!")
+    }
+    fun tarea2() {
+        var number = 1
+
+        while (number <= 10) {
+            if (number % 2 == 0) {
+                println(number)
+            }
+            number++
+        }
+    }
+
+    fun tarea3(){
+        val platos = arrayOf("Hamburguesa", "Pizza", "Ensalada", "Sushi", "Pasta")
+
+        for (plato in platos) {
+            println(plato)
+        }
+    }
+    fun tarea4() {
+        val platos = arrayOf(
+            Pair("Hamburguesa", 10.0),
+            Pair("Pizza", 12.0),
+            Pair("Ensalada", 8.0),
+            Pair("Sushi", 15.0),
+            Pair("Pasta", 11.0)
+        )
+
+        for (plato in platos) {
+            val nombrePlato = plato.first
+            val precioPlato = plato.second
+
+            println("Plato: $nombrePlato")
+            println("Precio: $precioPlato")
+            println()
+        }
+    }
+
+    fun tarea5(){
+        val plato1 = mapOf(
+            "plato" to "Hamburguesa",
+            "precio" to 10.0,
+            "ingredientes" to arrayOf("Pan", "Carne", "Queso", "Lechuga", "Tomate")
+        )
+        val plato2 = mapOf(
+            "plato" to "Pizza",
+            "precio" to 12.0,
+            "ingredientes" to arrayOf("Masa de pizza", "Salsa de tomate", "Queso", "Jamón", "Champiñones")
+        )
+        val plato3 = mapOf(
+            "plato" to "Ensalada",
+            "precio" to 8.0,
+            "ingredientes" to arrayOf("Lechuga", "Tomate", "Pepino", "Aceitunas", "Aderezo")
+        )
+
+        val arrayPlatos = arrayOf(plato1, plato2, plato3)
+
+        for (plato in arrayPlatos) {
+            val nombrePlato = plato["plato"] as String
+            val precioPlato = plato["precio"] as Double
+            val ingredientesPlato = plato["ingredientes"] as Array<String>
+
+            println("Plato: $nombrePlato")
+            println("Precio: $precioPlato")
+            println("Ingredientes: ")
+            for (ingrediente in ingredientesPlato) {
+                println("- $ingrediente")
+            }
+            println()
+        }
+
     }
 
 }
