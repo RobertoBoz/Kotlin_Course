@@ -168,11 +168,11 @@ class MainActivity : AppCompatActivity() {
         }while (intentos < 3 && pin != clave_ingresada)
 
         if(intentos > 3) println("Tarjeta bloqueada")
-
         ingresar_sueldo()
         mostrar_saldo()
         ingreso_dinero(1000.0F)
         retirar_dinero(2000.0F)
+        retirar_dinero(5000.0F)
     }
 
     fun mostrar_saldo(){
@@ -191,7 +191,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun retirar_dinero(dinero:Float){
-        saldo -= dinero
-        mostrar_saldo()
+        if(verificarCantidadDinero(dinero)){
+            saldo -= dinero
+            mostrar_saldo()
+        }else println("No se puede retirar")
+    }
+
+    private fun verificarCantidadDinero(cantidadDinero:Float):Boolean{
+        return cantidadDinero <= saldo
     }
 }
