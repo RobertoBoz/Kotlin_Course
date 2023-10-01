@@ -144,8 +144,18 @@ class MainActivity : AppCompatActivity() {
         //                  a == 5      3 <= valor
         q || w //  || = or condicion o condicion si uno es true devuelve true
         //                  a == 5      3 <= valor
-
         !t    // ! negacion de un booleano q = false w = false r = true t = true
+
+        var pin:Int = 1234
+        var intentos:Int = 0
+        var clave_ingresada:Int = 1232
+        // Ciclos do while
+         do {
+            println("Intentos: $intentos")
+             println("Clave ingresada: ${clave_ingresada++}")
+            intentos++
+         }while (intentos < 3 && pin != clave_ingresada)
+         if(intentos > 3) println("Tarjeta bloqueada")
 
     }
 }
