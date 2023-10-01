@@ -148,14 +148,37 @@ class MainActivity : AppCompatActivity() {
 
         var pin:Int = 1234
         var intentos:Int = 0
-        var clave_ingresada:Int = 1232
+        var clave_ingresada:Int = 1230
         // Ciclos do while
          do {
             println("Intentos: $intentos")
              println("Clave ingresada: ${clave_ingresada++}")
+             if(pin == clave_ingresada) break
             intentos++
          }while (intentos < 3 && pin != clave_ingresada)
-         if(intentos > 3) println("Tarjeta bloqueada")
 
+         if(intentos > 3) println("Tarjeta bloqueada")
+        clave_ingresada = 1232
+        // Ciclos do while
+        do {
+            println("Intentos: $intentos")
+            println("Clave ingresada: ${++clave_ingresada}")
+            if(pin == clave_ingresada) break
+            intentos++
+        }while (intentos < 3 && pin != clave_ingresada)
+
+        if(intentos > 3) println("Tarjeta bloqueada")
+
+        ingresar_sueldo()
+    }
+
+    fun mostrar_saldo(){
+        println("Tu saldo es: $saldo $moneda")
+    }
+
+    fun ingresar_sueldo(){
+        saldo += sueldoFloat
+        println("Se ha ingresado el sueldo: $sueldoFloat $moneda")
+        mostrar_saldo()
     }
 }
