@@ -167,6 +167,10 @@ class MainActivity : AppCompatActivity() {
             intentos++
         }while (intentos < 3 && pin != clave_ingresada)
 
+        var recibos: Array<String> = arrayOf("luz", "agua", "gas")
+
+        println(recibos[2])
+
         if(intentos > 3) println("Tarjeta bloqueada")
         ingresar_sueldo()
         mostrar_saldo()
