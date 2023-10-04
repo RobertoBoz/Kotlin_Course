@@ -12,4 +12,6 @@ open class Person(var name:String = "Anonimo", var passport:String? = null) {
     }
 }
 
-class Athlete (name:String, passport:String?): Person(name, passport)
+class Athlete (name:String, passport:String?,var sport:String): Person(name, passport){
+
+}

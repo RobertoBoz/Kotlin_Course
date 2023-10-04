@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        /* Variables de prueba
+         //Variables de prueba
         var rboz = Person("Roberto", null)
 
         println( rboz.alive)
@@ -35,7 +35,15 @@ class MainActivity : AppCompatActivity() {
         println( anonimo.name)
         println( anonimo.passport)
         anonimo.die()
-        println( anonimo.alive)*/
+        println( anonimo.alive)
+
+        var messi = Athlete("Messi", "1234", "Futbol")
+        println( messi.alive)
+        println( messi.name)
+        println( messi.passport)
+        println( messi.sport)
+        messi.die()
+        println( messi.alive)
 
     }
 
